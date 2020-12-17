@@ -1,0 +1,75 @@
+<h1 class="m-5">Tell us a little more about yourself</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1 my-auto mr-2">
+            <button mat-icon-button class="btn" (click)="prev()"><mat-icon>arrow_back</mat-icon></button>
+        </div>
+        <div class="col-10">
+            <mat-card>
+                <mat-card-content>
+                    <form [formGroup]="form" (keyup.enter) = "next()">
+                        <mat-form-field class="w-100">
+                            <mat-label>Level of education</mat-label>
+                            <mat-select formControlName="degree">
+                                <mat-option *ngFor="let degree of degrees" [value]="degree">
+                                    {{ degree }}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error>This field is required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100">
+                            <mat-label>Employment status</mat-label>
+                            <mat-select formControlName="employment">
+                                    <mat-option *ngFor="let employment of employmentStatus" [value]="employment">
+                                        {{ employment }}
+                                    </mat-option>
+                            </mat-select>
+                            <mat-error>This field is required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100">
+                            <mat-label>Age</mat-label>
+                            <input matInput type="number" formControlName="age" autocomplete="off">
+                            <mat-error *ngIf="this.form.get('age').touched && !this.form.get('age').value">This field is required</mat-error>
+                            <mat-error *ngIf="this.form.get('age').touched && this.form.get('age').hasError('pattern') && this.form.get('age').value">Value must be between 1 - 99</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100">
+                            <mat-label>Zip code</mat-label>
+                            <input matInput type="text" formControlName="zipcode" (keyup.enter)="next()">
+                            <mat-error>This field is required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-100">
+                            <mat-label>Income</mat-label>
+                            <input matInput type="number" [(ngModel)]="value" name="sliderValue" formControlName="income" readonly>
+                            <mat-hint>Select income on slider</mat-hint>
+                        </mat-form-field>
+
+                    </form>
+                    <div class="col-12">
+                        <div class="row">
+                            <mat-slider
+                                class="income-slider"
+                                [max]="max"
+                                [min]="min"
+                                [step]="step"
+                                [thumbLabel]="thumbLabel"
+                                [displayWith]="formatLabel"
+                                [(ngModel)]="value"
+                                color='primary'
+                                class="col-12"
+                                (keyup.enter)="next()"
+                            >
+                            </mat-slider>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" class="w-100" (click)="next()" [disabled]="form.invalid">Next</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

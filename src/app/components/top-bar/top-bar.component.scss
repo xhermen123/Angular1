@@ -1,0 +1,85 @@
+.navigation {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+	color: white;
+}
+
+.navigation a.black {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: black;
+}
+
+.home-link {
+    text-decoration: none;
+}
+
+.logo-img {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/logotype-light-e0f83a.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 105px;
+    height: 26px;
+    margin-top: 1em;
+}
+
+.logo-img.red {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/logotype-primary-cb75e2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 105px;
+    height: 26px;
+    margin-top: 1em;
+}
+
+ul {
+	border-radius: 5px;
+}
+
+li.item-signup.show {
+    display: inline;
+}
+
+li.item-signup.show a{
+    color: red;
+}
+
+li.item-signup {
+    display: none;
+}
+
+#toggler {
+	color: white;
+	border: 2px solid white;
+}
+
+#navbar {
+	border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+	.item-bg:first-of-type {
+		border-radius: 5px 5px 0 0;
+	}
+	.item-bg.last {
+		border-radius: 0 0 5px 5px;
+	}
+	.item-bg {
+		background: white;
+		transition: 0.3s;
+	}
+	.item-bg>a {
+		color: #212529;
+	}
+}

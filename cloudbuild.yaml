@@ -1,0 +1,26 @@
+steps:
+  # Install Angular
+  - name: 'gcr.io/cloud-builders/npm@sha256:2d00f7f93e1731f62a1ae15c9232a028f5305da873b556344a934bddcedfb5f1'
+    args: ['install','-g','@angular/cli' ]
+
+  # Install Dependencies
+  - name: 'gcr.io/cloud-builders/npm@sha256:2d00f7f93e1731f62a1ae15c9232a028f5305da873b556344a934bddcedfb5f1'
+    args: ['install']
+
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+        - kms
+        - decrypt
+        - --ciphertext-file=env.yaml.enc
+        - --plaintext-file=env.yaml
+        - --location=global
+        - --keyring=backend-credentials
+        - --key=django-env
+
+  # build Project in mode Prod.
+  - name: 'gcr.io/cloud-builders/npm@sha256:2d00f7f93e1731f62a1ae15c9232a028f5305da873b556344a934bddcedfb5f1'
+    args: ['run','ng','--','build','--prod','--aot']
+
+  # Deploy to google cloud app egnine
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy', '--version=prod']

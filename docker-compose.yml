@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  node:
+    build: .
+    command: "npm run start"
+    volumes:
+      - .:/app
+    ports:
+      - "4200:4200"

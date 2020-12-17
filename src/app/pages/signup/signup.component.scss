@@ -1,0 +1,80 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-topbar {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid #F5F6F7;
+    position: relative;
+}
+
+.logo-img {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/logotype-primary-cb75e2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 105px;
+    height: 26px;
+}
+
+.signup-topbar ul {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    list-style: none;
+    color: #0D202F;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.signup-topbar ul li {
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.signup-footer {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+	min-height: 80px;
+    max-height: 80px;
+    bottom-margin: 0;
+    padding: 16px 0;
+	align-items: center;
+    border-top: 1px solid #DBDDDE;
+	position: relative;
+	left: 0;
+    bottom: 0;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    color: #3B4F60;
+    margin-bottom: 0;
+}
+
+.footer-logo {
+    display: flex;
+}
+
+.footer-logo-wrapper {
+    max-width: 125px;
+}
+
+.footer-logo img {
+    width: 100%;
+    margin-right: 8px;
+}

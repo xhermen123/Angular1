@@ -1,0 +1,413 @@
+.sticky {
+    z-index: 1001;
+    transition: 0.3s;
+    background-color: #fff !important;
+    box-shadow: 0 2px 14px rgba(13,32,47,0.1);
+}
+
+.top-bar {
+    z-index: 1001;
+    transition: 0.3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+}
+
+.ad-text h1 {
+    font-size: 60px;
+    line-height: 68px;
+    margin-bottom: 0.66em;
+    text-align: left;
+    color: white;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight: 500;
+}
+
+.paragraphs {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    text-align: left;
+    color: white;
+}
+
+.explore-more {
+    position: absolute;
+    padding: 8px 0;
+    bottom: 0px;
+    margin: 0 auto;
+    text-align: center;
+    // left: 50%;
+    top: 85%;
+    cursor: pointer;
+}
+
+li.arrow:before {
+    content: ">";
+    color: white;
+    font-size: 1.5em;
+    border-color: white;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 10px;
+    width: 10px;
+    left: 55%;
+    top: 0.9em;
+    transform: rotate(90deg);
+    position: relative;
+}
+
+.signup-button {
+    position: absolute;
+}
+
+.paragraphs ol {
+    padding-left: 0;
+}
+
+.paragraphs ol li {
+    list-style: none;
+}
+
+.ad-pocket h3 {
+    text-align: center;
+}
+.rating {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+.explore-more {
+    color: white;
+}
+
+.check-image {
+    left: 0px;
+    top: 0px;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.vidoe-ad {
+    position: relative;
+}
+
+.video-container {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+	object-fit: cover;
+}
+
+
+.ad-text {
+    width: 100%;
+	text-align: center;
+	height: 100vh;
+}
+
+.ad-sector h3 {
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #0D202F;
+}
+
+.ad-sector, .ad-text, .ad-privacy, .ad-members, .ad-agent, .ad-pocket, .footer {
+    padding: 104px 0;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.ad-pocket {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    background-color: #F5F6F7;
+}
+
+img.app-icon {
+    margin: 0 auto;
+    display: block;
+}
+
+.ad-companies h3 {
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1em;
+    text-align: left;
+    color: #0D202F;
+}
+
+.logo-text {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    text-align: left;
+    color: #3B4F60;
+}
+
+.companies-logo {
+    height: 500px;
+    width: 100%;
+    margin-top: -104px;
+    margin-bottom: -104px;
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/logos-d15fb2.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 80%;
+    animation-timing-function: linear;
+    animation-name: logo-animation;
+    animation-duration: 250s;
+    animation-iteration-count: infinite;
+    opacity: 0.6;
+}
+
+@keyframes logo-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -10000px;
+    }
+}
+.ad-companies {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 104px 0;
+    background-color: #F5F6F7;
+}
+.ad-privacy {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    padding: 104px 0;
+    background-color: #0D202F;
+}
+
+.ad-privacy h3 {
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1em;
+    text-align: left;
+    color: #fff;
+}
+
+.privacy-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1.84em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.ad-members {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    background-color: #F5F6F7;
+}
+
+.feedback {
+    padding-bottom: 50px;
+    color: #3B4F60;
+}
+
+.ad-members .member-card {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    border-radius: 8px;
+    z-index: 500;
+    background-color: #fff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 12px 54px 0 rgba(13,32,47,0.10);
+    align-items: flex-start;
+}
+
+.member-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 50%;
+    background-position: center;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+}
+
+.member-img.first {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/user-1-e9702e.jpg);
+}
+
+.member-img.second {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/user-3-e5d983.jpg);
+}
+
+.member-img.third {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/user-2-0bb07a.jpg);
+}
+.member-avatar {
+    display: flex;
+}
+
+.member-avatar .member-info{
+    margin-left: 16px;
+}
+
+.member-name {
+    margin-top: 0.5em
+}
+
+.ad-agent {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/bg-forlife-bc7a3b.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: 400;
+    background-color: white;
+    min-height: 790px;
+}
+
+.ad-agent h3 {
+    margin-bottom: 1em;
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1em;
+    text-align: left;
+    color: #fff
+}
+
+.ad-members h3 {
+    margin-bottom: 1em;
+    font-size: 36px;
+    line-height: 48px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1em;
+    text-align: left;
+    color: black
+}
+
+.ad-agent .ad-text-agent {
+    display: block;
+    margin-bottom: 1.5em;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    text-align: left;
+    color: #fff;
+}
+.phone-input-form {
+    margin-top: 16px;
+}
+label {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 0;
+    color: #3B4F60;
+    display: block;
+}
+
+.phone-input {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    color: #0D202F;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #E6E7E7;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    overflow: visible;
+}
+
+.phone-submit {
+    font-family: "Circular-Book",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 14px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    position: relative;
+    padding: 16px 32px;
+    min-width: 120px;
+    display: inline-block;
+    width: 100%;
+    cursor: not-allowed;
+    background-color: #6B7A86;
+    color: #fff;
+    margin-top: 8px;
+}
+
+.logo {
+    background-image: url(//d3aut7n3cm71gu.cloudfront.net/assets/logotype-primary-cb75e2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 105px;
+    height: 26px;
+    margin-bottom: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.pocket-ad-card {
+    display: flex;
+}
+
+.pocket-ad-card div h5 {
+    padding-top: 25px;
+}
+
+.footer li {
+    list-style: none;
+    color: rgba(59, 79, 96, 0.6);
+}
+
+.footer li a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    display: inline-block;
+}
+
+.bg-white {
+	background: white;
+	transition: 0.3s;
+}

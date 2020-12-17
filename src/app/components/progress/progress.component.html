@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="justify-content-start">
+        <h1 style="text-align: center">{{totalValue}}</h1>
+        <h2 style="text-align: center">Protection Score</h2>
+    </div>
+    <div class="row justify-content-center">
+        <svg width = "450px" height="450px" viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g>
+                <g stroke-width="27" fill="none" stroke="#e0e0e0">
+                    <circle *ngFor="let radius of radiuses" [attr.cx]="cx" [attr.cy]="cy" [attr.r]="radius" />
+                </g>
+                <g stroke-width="27" fill="none">
+                    <path  *ngFor="let path of paths; let i = index;" stroke-linecap="round" stroke-linejoin="round" [attr.d]="path" [attr.stroke]="colors[i]" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" (click)="currentSlide(1)"></span> 
+            <span class="dot" (click)="currentSlide(2)"></span> 
+            <span class="dot" (click)="currentSlide(3)"></span> 
+        </div>
+    </div>
+    <div>
+        <div><h2>All Reports</h2></div>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let row of tableData; let i = index">
+                    <th scope="row">{{row.icon}}</th>
+                    <td><strong>{{row.content}}</strong></td>
+                    <td [ngStyle]="{'color': colors[i]}">{{currentPageValues[i]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

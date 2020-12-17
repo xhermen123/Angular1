@@ -1,0 +1,53 @@
+<ng-container [ngSwitch]="isLoading">
+  <mat-card *ngSwitchCase="false">
+    <mat-card-content class="text-center">
+      <ng-container *ngIf="registerResponse; else infoRef;">
+        <h1>{{ registerResponse.number }}</h1>
+        <div>
+          <app-progress></app-progress>
+        </div>
+      </ng-container>
+
+      <ng-template #infoRef>
+        <div class="w-100 d-flex flex-column">
+          <label class="font-weight-bold">First Name</label>
+          <span>{{ user.firstName }}</span>
+        </div>
+        <div class="w-100 d-flex flex-column">
+          <label class="font-weight-bold">Last Name</label>
+          <span>{{ user.lastName }}</span>
+        </div>
+        <div class="w-100 d-flex flex-column">
+          <label class="font-weight-bold">Phone Number</label>
+          <span>{{ user.phone }}</span>
+		</div>
+		<div class="w-100 d-flex flex-column">
+			<label class="font-weight-bold">Level of Education</label>
+			<span>{{ user.degree }}</span>
+		</div>
+		<div class="w-100 d-flex flex-column">
+			<label class="font-weight-bold">Employment Status</label>
+			<span>{{ user.employment }}</span>
+		</div>
+		<div class="w-100 d-flex flex-column">
+			<label class="font-weight-bold">Income</label>
+			<span>{{ user.income }}</span>
+		</div>
+		<div class="w-100 d-flex flex-column">
+			<label class="font-weight-bold">Age</label>
+			<span>{{ user.age }}</span>
+		</div>
+		<div class="w-100 d-flex flex-column">
+			<label class="font-weight-bold">Zip code</label>
+			<span>{{ user.zipcode }}</span>
+		</div>
+      </ng-template>
+    </mat-card-content>
+    <mat-card-actions *ngIf="!registerResponse">
+      <button mat-raised-button color="primary" (click)="send()">Send</button>
+    </mat-card-actions>
+  </mat-card>
+  <div class="d-flex justify-content-center align-items-center w-100" *ngSwitchCase="true">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-container>
